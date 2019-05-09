@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 import Presentation from './views/Presentation.vue'
 
 Vue.use(Router)
@@ -11,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'pre',
+      component: Presentation
     },
     {
       path: '/about',
@@ -22,10 +21,6 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ './views/About.vue')
-    },
-    {
-      path: '/:slide/:step',
-      component: Presentation
     }
   ]
 })

@@ -5,6 +5,7 @@ import store from './store'
 import Eagle from 'eagle.js'
 import 'eagle.js/dist/eagle.css'
 import 'animate.css'
+import 'eagle.js/dist/themes/gourmet/gourmet.css'
 
 Vue.use(Eagle)
 

@@ -1,41 +1,30 @@
-<template lang="pug">
-  div(id="app")
-    h1 Hello, World!
-    slide(:steps="4")
-      p(v-if="step >= 1")
-        | {{step}}
-      p(v-if="step >= 2")
-        | {{step}}
-      p(v-if="step >= 3")
-        | {{step}}
-      p(v-if="step >= 4")
-        | {{step}}
+<template lang='pug'>
+#app
+  router-view
 </template>
+
 <script>
-import { Slideshow } from 'eagle.js'
 export default {
-  mixins: [Slideshow]
+  name: 'app',
+  created() {
+    this.$router.replace('/')
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
+body {
+  width: 100%;
+  margin: 0 0;
+}
+html {
+  height: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  width: 100%;
 }
 </style>
